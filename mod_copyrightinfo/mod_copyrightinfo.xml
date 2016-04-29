@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension type="module" version="3.5.0" client="site" method="upgrade">
+		<name>Module - Copyright info</name>
+		<author>Karakonstadioglou Spiros</author>
+		<creationDate>April 2016</creationDate>
+		<copyright>Copyright (C) 2016</copyright>
+		<license>MIT License; see license.txt</license>
+		<authorEmail>karakonstadioglou.spiros@gmail.com</authorEmail>
+		<authorUrl>https://github.com/SaturnTheIcy/</authorUrl>
+		<version>1.0.0</version>
+		<description>A simple copyright info text module</description>
+		<files>
+	        <filename>mod_copyrightinfo.xml</filename>
+			<filename module="mod_copyrightinfo">mod_copyrightinfo.php</filename>
+			<filename>helper.php</filename>
+			<filename>index.html</filename>
+			<filename>MIT_License.txt</filename>
+			<filename>tmpl/default.php</filename>
+			<filename>tmpl/index.html</filename>
+			<folder>sql</folder>
+		</files>
+		<config>
+			<fields name="params">
+			    <fieldset name="basic">
+			        <field
+						name="useSiteName"
+						type="checkbox"
+						value="1"
+						label="Use site name?"
+						description="Use site name to be diplay insted company name"
+					/>
+			        <field
+						name="companyName"
+						type="text"
+						default=""
+						label="Set company name:"
+					/>
+			        <field
+						name="registerYear"
+						type="text"
+						label="Set register year:"
+						filter="integer"
+						required="true"
+					/>
+					<field
+						name="useCurrentYear"
+						type="checkbox"
+						value="0"
+						label="Use current year?"
+						descriptiom="Add the current year after the register year"
+					/>
+				</fieldset>
+			</fields>
+		</config>
+	</extension>
